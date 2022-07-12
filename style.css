@@ -105,10 +105,3 @@
     transform: translateX(5px);
     color: yellow;
 }
-.text-invalid{
-    color: red;
-}
-
-.input-invalid {
-    border: 1px solid red;
-}
