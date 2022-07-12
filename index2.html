@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/b05fc139f2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Edubin Register</title>
 </head>
 <body>
@@ -199,40 +200,44 @@
     </section>
     <!-- register -->
     <section class="bg-gray-300 py-20">
-        <form id="form-1" class="container mx-auto flex bg-white lg:grid grid-cols-2" action="">
+        <form id="form-1" class="container mx-auto flex bg-white lg:grid grid-cols-2 pt-12" action="">
             <div class="form-group mx-6 mb-5">
-                <label class="font-bold" for="fname">First name</label><br>
-                <input class="w-full text-gray-400 font-bold border-2 border-gray-300 rounded-md p-2" type="text" id="fname" name="fname" value="First name"><br>
-                <span class="form-message"></span>
+                <div class="lable-input" style="display:flex; justify-content: space-between;">
+                    <label class="font-bold" for="fname">First name</label>
+                    <label class="font-bold" for="fname" id="1" style="font-weight:400 ; font-size: 14px; color: red; display: none;">Vui long nhap vao day !</label>
+                </div>
+                <input class="w-full text-gray-400 font-bold border-2 border-gray-300 rounded-md p-2" type="text" id="fname" name="fname" placeholder="First Name"><br>
+                <p   class="form-message"></p >
+
             </div>
             <div class="form-group mx-6 mb-5">
                 <label class="font-bold" for="lname">Last name</label><br>
-                <input class="w-full text-gray-400 font-bold border-2 border-gray-300 rounded-md p-2" type="text" id="lname" value="Last name"><br>
-                <span class="form-message"></span>
+                <input class="w-full text-gray-400 font-bold border-2 border-gray-300 rounded-md p-2" type="text" id="lname" ><br>
+                <p   class="form-message"></p >
             </div>
             <div class="form-group mx-6 mb-5">
                 <label class="font-bold" for="uname">User name</label><br>
-                <input class="w-full text-gray-400 font-bold border-2 border-gray-300 rounded-md p-2" type="text" id="uname" name="fname" value="User name"><br>
-                <span class="form-message"></span>
+                <input class="w-full text-gray-400 font-bold border-2 border-gray-300 rounded-md p-2" type="text" id="uname" name="fname"><br>
+                <p   class="form-message"></p >
             </div>
             <div class="form-group mx-6 mb-5">
                 <label class="font-bold" for="Email">E-mail</label><br>
-                <input class="w-full text-gray-400 font-bold border-2 border-gray-300 rounded-md p-2" type="email" type="email" id="email" name="email" value="domain@gmail.com"><br>
-                <span class="form-message"></span>
+                <input class="w-full text-gray-400 font-bold border-2 border-gray-300 rounded-md p-2" type="email" id="email" name="email" ><br>
+                <p   class="form-message"></p >
             </div>
             <div class="form-group mx-6 mb-5">
                 <label class="font-bold" for="pword">Password</label><br>
-                <input class="w-full text-gray-400 font-bold border-2 border-gray-300 rounded-md p-2" type="password" id="pword" name="fname" value="Password">
-                <span class="form-message"></span>
+                <input class="w-full text-gray-400 font-bold border-2 border-gray-300 rounded-md p-2" type="password" id="pword" name="fname" >
+                <p   class="form-message"></p >
             </div>
             <div class="form-group mx-6 mb-5">
                 <label class="font-bold" for="p-word">Password confirmation</label><br>
-                <input class="w-full text-gray-400 font-bold border-2 border-gray-300 rounded-md p-2" type="password" id="p-word" name="p-word" value="Password Confirmation">
-                <span class="form-message"></span>
+                <input class="w-full text-gray-400 font-bold border-2 border-gray-300 rounded-md p-2" type="password" id="p-word" name="p-word">
+                <p   class="form-message"></p >
             </div>
             <div></div>
             <div class="flex justify-end mr-12 mb-12">
-                <input class="text-white py-3 px-7 bg-[#07294c] rounded-sm self-end" type="submit" value="Register">
+                <button class="text-white py-3 px-7 bg-[#07294c] rounded-sm self-end" type="submit" id="btnOk">Register</button>
             </div>
         </form>
     </section>
