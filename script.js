@@ -1,32 +1,36 @@
 // header__bottom
-let header_dropdown = document.getElementById('header-dropdown');
-let header_btn_bar = document.getElementById('header-btn-bar')
+let header_dropdown = document.getElementById("header-dropdown");
+let header_btn_bar = document.getElementById("header-btn-bar");
 
-header_btn_bar.addEventListener('click', () => {
-  header_dropdown.classList.toggle('hidden')
-})
+header_btn_bar.addEventListener("click", () => {
+  header_dropdown.classList.toggle("hidden");
+});
 // choose
 $(document).ready(function () {
-  $('.choose').slick({
+  $(".choose").slick({
     infinite: true,
     autoplay: true,
     autoplaySpeed: 2000,
     arrows: true,
-    prevArrow: '<button type="button" class="slick-prev pull-left"><i class="fa-solid fa-angle-left"></i></button>',
-    nextArrow: '<button type="button" class="slick-next pull-right"><i class="fa-solid fa-angle-right"></i></button>'
+    prevArrow:
+      '<button type="button" class="slick-prev pull-left"><i class="fa-solid fa-angle-left"></i></button>',
+    nextArrow:
+      '<button type="button" class="slick-next pull-right"><i class="fa-solid fa-angle-right"></i></button>',
   });
 });
 // best
 $(document).ready(function () {
-  $('.best__right').slick({
+  $(".best__right").slick({
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
     arrows: true,
-    prevArrow: '<button type="button" class="slick-prev pull-left"><i class="fa-solid fa-angle-left"></i></button>',
-    nextArrow: '<button type="button" class="slick-next pull-right"><i class="fa-solid fa-angle-right"></i></button>',
+    prevArrow:
+      '<button type="button" class="slick-prev pull-left"><i class="fa-solid fa-angle-left"></i></button>',
+    nextArrow:
+      '<button type="button" class="slick-next pull-right"><i class="fa-solid fa-angle-right"></i></button>',
     responsive: [
       {
         breakpoint: 768,
@@ -34,15 +38,15 @@ $(document).ready(function () {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-          dots: true
-        }
-      }
-    ]
+          dots: true,
+        },
+      },
+    ],
   });
 });
 // feedback
 $(document).ready(function () {
-  $('.feedback__slide').slick({
+  $(".feedback__slide").slick({
     infinite: true,
     slidesToShow: 2,
     slidesToScroll: 1,
@@ -55,15 +59,25 @@ $(document).ready(function () {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-          dots: true
-        }
-      }
-    ]
+          dots: true,
+        },
+      },
+    ],
+  });
+});
+// facilities
+let button_video = document.getElementById("btn-video");
+let button_video_bg = document.getElementById("btn-id-bg");
+button_video.addEventListener("click", () => {
+  button_video_bg.classList.remove("hidden");
+
+  button_video_bg.addEventListener("click", () => {
+    button_video_bg.classList.add("hidden");
   });
 });
 // icon
 $(document).ready(function () {
-  $('.list_icon').slick({
+  $(".list_icon").slick({
     infinite: true,
     slidesToShow: 5,
     slidesToScroll: 1,
@@ -77,21 +91,21 @@ $(document).ready(function () {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-          dots: true
-        }
-      }
-    ]
+          dots: true,
+        },
+      },
+    ],
   });
 });
 // Api
-let html=''
-var postApi = 'https://60d4611a61160900173cb070.mockapi.io/courses'
+let html = "";
+var postApi = "https://60d4611a61160900173cb070.mockapi.io/courses";
 fetch(postApi)
-  .then(function(response){
+  .then(function (response) {
     return response.json();
   })
-  .then(function(posts){
-    var htmls = posts.map(function(post){
+  .then(function (posts) {
+    var htmls = posts.map(function (post) {
       return `
   <div class="relative mx-2">
       <div class="overflow-hidden">
@@ -124,12 +138,12 @@ fetch(postApi)
           </div>
       </div>
       <div class="absolute bottom-[68px] w-full h-[1px] bg-gray-300"></div>
-  </div>`
+  </div>`;
     });
-    document.getElementById('courses-id').innerHTML = htmls.join("");
+    document.getElementById("courses-id").innerHTML = htmls.join("");
 
     $(document).ready(function () {
-      $('.courses__slide').slick({
+      $(".courses__slide").slick({
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -142,14 +156,13 @@ fetch(postApi)
               slidesToShow: 1,
               slidesToScroll: 1,
               infinite: true,
-              dots: true
-            }
-          }
-        ]
+              dots: true,
+            },
+          },
+        ],
       });
     });
-
   })
-  .catch(function(err){
+  .catch(function (err) {
     console.log(err);
   });

@@ -313,7 +313,12 @@
     <div class="facilities lg:bg-[url('img/bg-1.jpg')] bg-cover bg-no-repeat">
         <div class="mx-auto lg:grid grid-cols-2">
             <div class="facilities__left flex items-center justify-center">
-                <button type="button"><i class="fa-solid fa-play text-white text-3xl px-7 py-6 bg-yellow-500 rounded-full"></i></button>
+                <button id="btn-video" type="button"><i class="fa-solid fa-play text-white text-3xl px-7 py-6 bg-yellow-500 rounded-full"></i></button>
+                <div id="btn-id-bg" class="bg-black/[0.3] top-0 left-0 fixed w-full h-screen hidden">
+                    <div class="flex justify-center w-full h-full items-center z-50">
+                        <iframe width="1000" height="650" src="https://www.youtube.com/embed/Z-3drGxE8V8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
             </div>
             <div class="facilities__right bg-[#07294e]/[.9] text-white p-20">
                 <h3 class="text-3xl capitalize font-bold pb-12">our facilities</h3>
